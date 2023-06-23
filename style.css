@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    width:100%;
+
+}
+.fixed-navbar{
+    display:flex;
+    flex-direction: column;
+    width:20%;
+    background-color: black;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    position:fixed;
+    
+
+   
+
+}
+.fixed-navbar a{
+    position:relative;
+    font-size: 4vh;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing:2px;
+    color:transparent;
+    -webkit-text-stroke:1px rgba(255,255,255,0.5);
+    
+
+}
+.fixed-navbar a::before{
+    content:attr(data-text);
+    position:absolute;
+    color:var(--clr);
+    width:0;
+    overflow:hidden;
+    transition:1s;
+    border-right:8px solid var(--clr);
+    -webkit-text-stroke: 1px var(--clr);
+
+;}
+.fixed-navbar a:hover::before{
+    width:100%;
+    filter: drop-shadow(0 0 25px var(--clr));
+}
+.content-area{
+    width: 100%;
+    background-color: aqua;
+    
+}
+#Home{
+    width:100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#00ade1;
+  
+}
+#Contact{
+    width:100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#ff6493;
+
+}
+#Information{
+    width:100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#ffdd1c;
+
+}
+#Guide{
+    width:100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#dc00d4;
+
+}
+h1{
+    color:azure;
+    font-size:10vh;
+    
+}
+@media screen and (max-width: 500px){
+    .fixed-navbar{
+        width:30%;
+    }
+    .fixed-navbar a{
+        font-size:10px
+    }
+    h1{
+        font-size:25px;
+        position:relative;
+        left:30px
+        
+    
+    }
+}
+@media screen and (max-width:912px)and (min-width:540px){
+    .fixed-navbar{
+        width:40%;
+    }
+    .fixed-navbar a{
+        font-size:30px
+    }
+    h1{
+        font-size:30px;
+        position:relative;
+        left:30px
+        
+    
+    }
+
+}
+
+
